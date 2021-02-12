@@ -11,8 +11,12 @@
     "url": "git+https://github.com/salimkayabasi/mockalise.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Salim KAYABASI",
+    "email": "salim.kayabasi@gmail.com",
+    "url": "https://salimkayabasi.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/salimkayabasi/mockalise/issues"
   },
