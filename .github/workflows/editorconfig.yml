@@ -1,0 +1,11 @@
+name: Editor Config Checker
+
+on: push
+
+jobs:
+  editorconfig:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check file formatting against EditorConfig
+        uses: editorconfig-checker/action-editorconfig-checker@v1.0.0
