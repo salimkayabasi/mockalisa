@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "config:base",
+    "group:definitelyTyped",
+    "group:linters",
+    "group:test",
+    "group:monorepos",
+    ":label(dependencies)",
+    ":enableVulnerabilityAlertsWithLabel(vulnerability)",
+    ":combinePatchMinorReleases",
+    ":rebaseStalePrs",
+    ":maintainLockFilesWeekly",
+    ":preserveSemverRanges"
+  ],
+  "enabled": true,
+  "masterIssueApproval": true,
+  "masterIssueAutoclose": true,
+  "automerge": true
+}
