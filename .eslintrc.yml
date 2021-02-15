@@ -15,3 +15,6 @@ plugins:
 rules:
   prefer-arrow-callback: error
   no-console: error
+  no-param-reassign:
+    - error
+    - props: false

@@ -1,5 +1,6 @@
 .idea/
 .vscode/
+config.yml
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos,jetbrains+all,vscode,linux,azurefunctions
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos,jetbrains+all,vscode,linux,azurefunctions
