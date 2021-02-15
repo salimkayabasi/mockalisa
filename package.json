@@ -1,10 +1,10 @@
 {
-  "name": "mockalise",
+  "name": "mockalisa",
   "version": "0.5.0",
   "description": "Mock any REST API on your local",
   "main": "index.js",
   "bin": {
-    "mockalise": "./bin/cli.js"
+    "mockalisa": "./bin/cli.js"
   },
   "scripts": {
     "lint": "eslint . --ext .js,.json",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salimkayabasi/mockalise.git"
+    "url": "git+https://github.com/salimkayabasi/mockalisa.git"
   },
   "keywords": [],
   "author": {
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/salimkayabasi/mockalise/issues"
+    "url": "https://github.com/salimkayabasi/mockalisa/issues"
   },
-  "homepage": "https://github.com/salimkayabasi/mockalise#readme",
+  "homepage": "https://github.com/salimkayabasi/mockalisa#readme",
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",

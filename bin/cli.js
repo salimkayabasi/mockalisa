@@ -2,13 +2,13 @@
 
 require('../src/utils/logging');
 const logger = require('log4js').getLogger('cli');
-const { version } = require('../package.json');
+const { version, name } = require('../package.json');
 
 const onFatalError = error => {
   process.exitCode = 2;
   logger.error(`
 Oops! Something went wrong! :(
-Mockalise: ${version}
+${name}: ${version}
 ${error.message}`);
 
   logger.debug(error.stack);
