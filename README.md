@@ -13,3 +13,5 @@ OR
 ```shell
 npx mockalisa config.yml
 ```
+
+If you need a config file as an example to start. Please have a look on [this folder](test/yml/)
