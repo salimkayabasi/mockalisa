@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('../src/utils/logging');
+require('../src/utils/init');
 const logger = require('log4js').getLogger('cli');
 const { version, name } = require('../package.json');
 
@@ -10,7 +10,6 @@ const onFatalError = error => {
 Oops! Something went wrong! :(
 ${name}: ${version}
 ${error.message}`);
-
   logger.debug(error.stack);
 };
 
