@@ -9,7 +9,7 @@ if (!existsSync(resolve(process.cwd(), configPath))) {
   process.exit(1);
 }
 
-const config = parser('config.yml');
+const config = parser(configPath);
 const cwd = process.cwd();
 
 module.exports = {
