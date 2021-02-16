@@ -1,4 +1,4 @@
-require('./utils/logging');
+require('./utils/init');
 const config = require('config');
 const { getLogger } = require('log4js');
 const { name } = require('../package.json');

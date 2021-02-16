@@ -8,10 +8,10 @@ const configPath = resolve(cwd, './test/yml/config.test.yml');
 
 describe('Smoke Test', () => {
   jest.setTimeout(3e4);
-  const forkedProcesses = new Set();
+  const children = new Set();
   const run = args => {
     const child = fork(cliPath, Array.isArray(args) ? args : [args]);
-    forkedProcesses.add(child);
+    children.add(child);
     return child;
   };
   const request = got.extend({
@@ -21,8 +21,8 @@ describe('Smoke Test', () => {
     },
   });
   afterEach(() => {
-    forkedProcesses.forEach(child => child.kill());
-    forkedProcesses.clear();
+    children.forEach(child => child.kill());
+    children.clear();
   });
   test('Run and test', async () => {
     run(configPath);
