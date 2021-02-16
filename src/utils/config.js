@@ -1,3 +1,4 @@
 const { resolve } = require('path');
 
-process.NODE_CONFIG_DIR = resolve('../../config');
+process.env.SUPPRESS_NO_CONFIG_WARNING = 'true';
+process.env.NODE_CONFIG_DIR = resolve(__dirname, '../../config');
