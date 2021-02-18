@@ -3,7 +3,10 @@ log:
   level: DEBUG
 servers:
   - path: '/pet-store'
-    target: 'https://editor.swagger.io/api/v3'
+    proxy:
+      target: 'https://editor.swagger.io/api/v3'
+      logLevel: debug
+      timeout: 5000
     files:
       - test/yml/petstore.oa3.yml
       - test/yml/local.test.yml

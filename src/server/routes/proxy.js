@@ -4,16 +4,29 @@ const config = require('config');
 
 module.exports = {
   attach: app => {
-    config.servers.forEach(p => {
-      logger.debug(`Adding proxy on ${p.path}`);
+    config.servers.forEach(server => {
+      if (!(server.proxy && server.proxy.target)) {
+        return;
+      }
+      logger.debug(`Adding proxy on ${server.path}`);
       app.use(
-        p.path,
+        server.path,
         createProxyMiddleware({
-          target: p.target,
+          ...server.proxy,
           changeOrigin: true,
-          logLevel: 'silent',
+          logProvider() {
+            return logger;
+          },
           pathRewrite: {
-            [`^${p.path}`]: '',
+            [`^${server.path}`]: '',
+          },
+          onProxyReq(proxyReq, req) {
+            if (req.body) {
+              const bodyData = JSON.stringify(req.body);
+              proxyReq.setHeader('Content-Type', 'application/json');
+              proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+              proxyReq.write(bodyData);
+            }
           },
         }),
       );
