@@ -20,6 +20,11 @@ module.exports = {
   },
   servers: (config.servers || [])
     .map(server => {
+      server.proxy = {
+        logLevel: 'silent',
+        timeout: 1e4,
+        ...server.proxy,
+      };
       server.files = (server.files || []).map(file => {
         if (!isAbsolute(file)) {
           return resolve(cwd, file);
