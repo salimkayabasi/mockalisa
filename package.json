@@ -1,6 +1,6 @@
 {
   "name": "mockalisa",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Mock any REST API on your local",
   "main": "index.js",
   "bin": {
